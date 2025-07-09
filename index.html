@@ -29,8 +29,8 @@
             width: 100vw;
             z-index: 100;
             background: rgba(255,255,255,0.75);
-            backdrop-filter: blur(16px) saturate(180%);
-            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            /* backdrop-filter: blur(16px) saturate(180%); */
+            /* -webkit-backdrop-filter: blur(16px) saturate(180%); */
             box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 0 rgba(79,140,255,0.08);
             border-bottom: 1px solid rgba(79,140,255,0.08);
             transition: background 0.3s, box-shadow 0.3s;
@@ -150,19 +150,21 @@
             display: block;
             text-align: center;
         }
-        /* Profile Card Styles */
+        /* Profile Card Styles Below  */
         .profile-card {
-            position: absolute;
-            top: 2rem;
-            right: 1rem;
+            position: sticky;
+            top: 12rem;
+            right: 0;
+            margin: 2rem 0 2rem auto;
             display: flex;
             align-items: center;
             gap: 1rem;
-            background: #fff;
+            background: #ffffff;
             border-radius: 10px;
-            padding: 0.5rem 1rem;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            padding: 0.5rem 1.5rem;
+            box-shadow: 0 2px 12px #b569cc;
             z-index: 99;
+            max-width: 350px;
         }
         .profile-photo {
             width: 50px;
@@ -193,17 +195,26 @@
                 justify-content: center;
             }
         }
+        @media (max-width: 900px) {
+            .profile-card {
+                position: static;
+                margin: 1.5rem auto;
+                width: 100%;
+                justify-content: center;
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-attachment: fixed; background-position: center;">
     <header class="bg-white shadow-sm py-4 text-center mb-4">
-        <h1 class="mb-0" style="color: var(--primary);">Abhranil Paul</h1>
+        <h1 class="mb-0">Abhranil Paul</h1>
         <p class="mt-2 mb-0 text-secondary">Developer & Designer</p>
         <nav class="mt-3">
-            <a class="fw-bold mx-2 text-decoration-none" style="color: var(--primary);" href="#about">About</a>
-            <a class="fw-bold mx-2 text-decoration-none" style="color: var(--primary);" href="#projects">Projects</a>
-            <a class="fw-bold mx-2 text-decoration-none" style="color: var(--primary);" href="#skills">Skills</a>
-            <a class="fw-bold mx-2 text-decoration-none" style="color: var(--primary);" href="#contact">Contact</a>
+            <a class="fw-bold mx-2 text-decoration-none" href="#about">About</a>
+            <a class="fw-bold mx-2 text-decoration-none" href="#projects">Projects</a>
+            <a class="fw-bold mx-2 text-decoration-none" href="#skills">Skills</a>
+            <a class="fw-bold mx-2 text-decoration-none" href="#contact">Contact</a>
         </nav>
     </header>
     <!-- Sidebar Navigation -->
@@ -224,7 +235,7 @@
         </div>
         <section id="about" class="mb-4 p-4 bg-white rounded shadow-sm">
             <h2 style="color: var(--primary);">About Me</h2>
-            <p>Hi! I'm Abhranil, a passionate web developer specializing in building modern, responsive websites and web apps. I love turning ideas into beautiful, functional digital experiences.</p>
+            <p>Hi! I'm Abhranil, a passionate developer specializing in building modern, responsive websites and web apps. I love turning ideas into beautiful, functional digital experiences maybe.</p>
         </section>
         <section id="projects" class="mb-4 p-4 bg-white rounded shadow-sm">
             <h2 style="color: var(--primary);">Projects</h2>
@@ -233,7 +244,7 @@
                     <div class="card h-100 bg-light border-0">
                         <div class="card-body">
                             <h3 class="card-title" style="color: var(--accent);">Portfolio Website</h3>
-                            <p class="card-text">A sleek, responsive portfolio to showcase my work and skills.</p>
+                            <p class="card-text"> Todo: showcase my work and skills.</p>
                             <button class="modern-btn card-link" style="color: var(--primary);">View Project</button>
                         </div>
                     </div>
@@ -251,7 +262,7 @@
                     <div class="card h-100 bg-light border-0">
                         <div class="card-body">
                             <h3 class="card-title" style="color: var(--accent);">Blog Platform</h3>
-                            <p class="card-text">A modern blog platform with markdown support and user authentication.</p>
+                            <p class="card-text">A modern blog platform with markdown support and user authentication. Soon !!</p>
                             <button class="modern-btn card-link" style="color: var(--primary);">View Project</button>
                         </div>
                     </div>
