@@ -4,11 +4,12 @@
     --text: #222;
     --accent: #ffb347;
 }
+* { box-sizing: border-box; }
 body {
+    margin: 0;
+    font-family: 'Lexend', 'Poppins', 'Montserrat', sans-serif;
     background: var(--bg);
     color: var(--text);
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
 }
 header {
     position: fixed;
@@ -16,34 +17,36 @@ header {
     left: 0;
     width: 100vw;
     z-index: 100;
-    background: rgba(159, 75, 75, 0.75);
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(255,255,255,0.75);
     box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 0 rgba(79,140,255,0.08);
-    border-bottom: 1px solid rgba(3, 51, 140, 0.752);
+    border-bottom: 1px solid rgba(79,140,255,0.08);
     transition: background 0.3s, box-shadow 0.3s;
+    text-align: center;
     padding: 2rem 0;
 }
 header h1 {
+    margin: 0;
     font-size: 2.5rem;
-    color: var(--text);
-    font-weight: 700;
+    color: var(--primary);
+    font-family: 'Lexend', 'Montserrat', sans-serif;
 }
 header p {
+    margin: 0.5rem 0 0;
     color: #555;
     font-size: 1.2rem;
 }
+nav {
+    margin-top: 1.5rem;
+}
 nav a {
-    color: var(--text);
+    color: var(--primary);
     text-decoration: none;
     margin: 0 1rem;
     font-weight: 700;
-    transition: color 0.2s, text-shadow 0.2s;
-    position: relative;
+    transition: color 0.2s;
 }
-nav a:hover, nav a.active {
-    color: var(--primary);
-    text-shadow: 0 2px 8px rgba(79,140,255,0.3);
+nav a:hover {
+    color: var(--accent);
 }
 .sidebar-vertical {
   position: fixed;
@@ -160,18 +163,16 @@ body, .container, section, header {
   }
 }
 .container {
-    margin: 0 auto;
     border-radius: 60px;
-    /* max-width: 900px; */
-    /* margin: 2rem auto 2rem auto; Top 2 rem . for header  and bottom 2 rem . for footer  */
-    /* padding: 0 1rem 0 5rem;      5rem left padding for sidebar, adjust as needed */
-    position: relative;
     background: linear-gradient(135deg, #82d5da 0%, #cc84e2 100%);
     background-size: 200% 200%;
     animation: gradientFlow 3.5s ease-in-out infinite;
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     background-color: rgba(255,255,255,0.35); /* subtle white overlay for frosted effect */
+    max-width: 900px;
+    margin: 4rem auto 2rem auto;
+    padding: 0 1rem;
 }
 
 @keyframes gradientFlow {
@@ -205,15 +206,16 @@ body, .container, section, header {
   }
 }
 section {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
     margin-bottom: 3rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.03);
     padding: 2rem;
 }
 h2 {
     color: var(--primary);
     margin-top: 0;
+    font-family: 'Lexend', 'Montserrat', sans-serif;
 }
 .card {
     background: var(--bg);
@@ -260,6 +262,20 @@ h2 {
     transform: scale(1.09) rotate(-2deg);
     box-shadow: 0 4px 16px rgb(255, 215, 159);
 }
+.badge.html5 { background: #e44d26 !important; color: #fff !important; }
+.badge.css { background: #264de4 !important; color: #fff !important; }
+.badge.js { background: #f0db4f !important; color: #323330 !important; }
+.badge.react { background: #61dafb !important; color: #20232a !important; }
+.badge.nodejs { background: #3c873a !important; color: #fff !important; }
+.badge.figma { background: #f24e1e !important; color: #fff !important; }
+.badge.git { background: #f1502f !important; color: #fff !important; }
+.badge.mysql { background: #00758f !important; color: #fff !important; }
+.badge.dotnet { background: #512bd4 !important; color: #fff !important; }
+.badge.java { background: #007396 !important; color: #fff !important; }
+.badge.python { background: #3776ab !important; color: #fff !important; }
+.badge.cpp { background: #00599c !important; color: #fff !important; }
+.badge.c { background: #a8b9cc !important; color: #222 !important; }
+.badge.csharp { background: #68217a !important; color: #fff !important; }
 .contact-info a {
     color: var(--primary);
     text-decoration: none;
