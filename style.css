@@ -237,16 +237,19 @@ h2 {
     text-decoration: underline;
     font-size: 0.95rem;
     transition: color 0.2s;
+    margin-top: 0.5rem;
+    display: inline-block;
 }
 .card-link:hover {
     color: var(--accent) !important;
 }
 .badge {
+  text-decoration: none;
     background: var(--primary) !important;
     color: #fff !important;
     font-size: 1rem;
     font-weight: 500;
-    box-shadow: 0 1px 4px rgba(79,140,255,0.10);
+    box-shadow: 0 1px 4px rgba(79, 141, 255, 0.678);
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
     border-radius: 999px !important;
@@ -299,27 +302,28 @@ html {
 /* .container > section:first-child {
     margin-top: 1.5rem;
 } */
+/* Modern Button Styles */
 .modern-btn {
-    background: var(--primary);
+  text-decoration: none;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
     color: #fff !important;
     border: none;
-    border-radius: 999px;
-    padding: 0.55rem 1.5rem;
-    font-size: 1rem;
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
     font-weight: 600;
-    box-shadow: 0 1px 6px rgba(79,140,255,0.10);
-    transition: background 0.2s, color 0.2s, transform 0.18s, box-shadow 0.18s;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(106,17,203,0.08);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
     outline: none;
-    margin-bottom: 0.5rem;
-    margin-right: 0.5rem;
-    display: inline-block;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.08);
 }
+
 .modern-btn:hover, .modern-btn:focus {
-    background: var(--accent);
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(106,17,203,0.15);
     color: #fff !important;
-    transform: scale(1.07) rotate(-2deg);
-    box-shadow: 0 4px 16px rgba(255,179,71,0.13);
 }
 .modal-overlay {
     position: fixed;
@@ -365,4 +369,4 @@ html {
         padding: 1.2rem 0.7rem 1.2rem 0.7rem;
         max-width: 98vw;
     }
-} 
+}
